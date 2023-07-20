@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Myrtle's Gacha Game</title>
+	<script type="text/javascript" src="index.js"></script>
+	<style type="text/css">
+		.pool {
+			border: 1px solid black;
+			display: inline-block;
+			width: 15%;
+			padding: 0.5em;
+			margin: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Myrtle's Gacha Game Proof of Concept</h1>
+	<div id="controls">
+		<table>
+			<tr><td>Uncommon Key at:</td><td id="t1-unlock"></td></tr>
+			<tr><td>Rare Key at:</td><td id="t2-unlock"></td></tr>
+			<tr><td>Legendary Key at:</td><td id="t3-unlock"></td></tr>
+		</table>
+		<p>Tip Total:</p>
+		<p id="tip-total">0</p>
+		<p>Available for spins:</p>
+		<p id="bank">0</p>
+		<button id="tip" onclick="addTip(1)">Tip 1</button>
+		<button id="tip" onclick="addTip(5)">Tip 5</button>
+		<button id="tip" onclick="addTip(10)">Tip 10</button>
+		<button id="spin" onclick="spin()">Spin (<span id="spin-count">0</span>)</button>
+		<p>Last Reward: <span id="reward">Nothing yet!</span></p>
+
+	</div>
+	<div id="pools">
+		<div id="common" class="pool">
+			<h2 id="common-label">C</h2>
+			<ul id="common-list"></ul>
+		</div>
+		<div id="uncommon" class="pool">
+			<h2 id="uncommon-label">UC</h2>
+			<ul id="uncommon-list"></ul>
+		</div>
+		<div id="rare" class="pool">
+			<h2 id="rare-label">R</h2>
+			<ul id="rare-list"></ul>
+		</div>
+		<div id="legendary" class="pool">
+			<h2 id="legendary-label">UR</h2>
+			<ul id="legendary-list"></ul>
+		</div>
+	</div>
+</body>
+</html>
